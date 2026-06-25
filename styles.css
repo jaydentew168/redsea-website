@@ -1148,3 +1148,8 @@ nav {
     padding: 1.7rem 1.1rem !important;
   }
 }
+@media (max-width: 768px) {
+  nav.nav--hidden {
+    transform: translateY(-120%) !important;
+  }
+}
