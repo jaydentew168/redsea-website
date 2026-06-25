@@ -711,240 +711,9 @@ nav {
     justify-content: center;
   }
 }
-
 /* =========================
-   MOBILE FIX FOR REDSEA
-   Put this at the VERY BOTTOM of styles.css
-========================= */
-
-@media (max-width: 768px) {
-  html,
-  body {
-    width: 100%;
-    overflow-x: hidden;
-  }
-
-  body {
-    padding-top: 80px;
-  }
-
-  /* NAVBAR */
-  nav {
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    max-width: 100% !important;
-    z-index: 9999;
-    background-color: var(--primary-color);
-  }
-
-  .nav__header {
-    padding: 0.7rem 1rem !important;
-    background-color: var(--primary-color);
-  }
-
-  .logo {
-    font-size: 1.35rem !important;
-    line-height: 1.2;
-  }
-
-  .logo img {
-    width: 48px !important;
-    height: 48px !important;
-  }
-
-  .nav__links {
-    top: 72px !important;
-  }
-
-  /* HEADER / HERO */
-  .header__container {
-    display: flex !important;
-    flex-direction: column !important;
-    padding: 1rem !important;
-    gap: 1.2rem;
-  }
-
-  .header__image {
-    order: 1;
-    width: 100%;
-  }
-
-  .header__image img {
-    width: 100% !important;
-    height: 230px !important;
-    max-width: 100% !important;
-    object-fit: cover !important;
-    border-radius: 14px;
-  }
-
-  .header__content {
-    order: 2;
-    display: block !important;
-    width: 100%;
-  }
-
-  .header__content > div {
-    max-width: 100% !important;
-    padding: 1.2rem 0.5rem !important;
-    background-color: transparent !important;
-    backdrop-filter: none !important;
-  }
-
-  .header__content h1 {
-    font-size: 2.15rem !important;
-    line-height: 1.15 !important;
-    margin-bottom: 1rem;
-    word-break: normal;
-  }
-
-  .header__content p {
-    font-size: 1rem !important;
-    line-height: 1.6 !important;
-  }
-
-  /* GENERAL SECTION */
-  .section__container {
-    padding: 3rem 1rem !important;
-  }
-
-  .section__header {
-    font-size: 2rem !important;
-    line-height: 1.2 !important;
-  }
-
-  .section__description {
-    font-size: 1rem !important;
-    line-height: 1.6;
-  }
-
-  /* ADVANTAGES */
-  .deals__container {
-    grid-template-columns: 1fr !important;
-    gap: 1.5rem;
-  }
-
-  .deals__card {
-    text-align: center;
-  }
-
-  /* ABOUT */
-  .about__header {
-    text-align: center;
-  }
-
-  .about__content {
-    grid-template-columns: 1fr !important;
-  }
-
-  .about__image {
-    grid-area: auto !important;
-  }
-
-  .about__image img {
-    height: 240px;
-    object-fit: cover;
-    border-radius: 14px;
-  }
-
-  .about__grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .about__card {
-    text-align: center;
-  }
-
-  /* PRODUCTS */
-  .product__grid {
-    grid-template-columns: 1fr !important;
-    margin-top: 2rem;
-  }
-
-  .product__card {
-    text-align: center;
-  }
-
-  .product__card img {
-    max-width: 220px !important;
-  }
-
-  /* CONTACT */
-  .client__content {
-    padding: 3rem 1rem !important;
-    border-radius: 14px;
-  }
-
-  .client__content .section__header {
-    font-size: 2.2rem !important;
-  }
-
-  .client__card,
-  .contact__card {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 1.5rem;
-    text-align: center !important;
-  }
-
-  .contact-image {
-    width: 100% !important;
-    height: 250px !important;
-    object-fit: cover !important;
-    border-radius: 14px;
-  }
-
-  .contact__info p {
-    font-size: 1rem !important;
-    line-height: 1.7;
-    font-style: normal !important;
-  }
-
-  .contact__links {
-    flex-direction: column !important;
-    gap: 1rem;
-  }
-
-  .contact-btn {
-    width: 100%;
-    justify-content: center;
-  }
-
-  /* FOOTER */
-  .footer__container {
-    grid-template-columns: 1fr !important;
-    text-align: center;
-    gap: 2rem;
-  }
-
-  .footer__socials {
-    justify-content: center;
-  }
-}
-
-/* EXTRA SMALL PHONE */
-@media (max-width: 420px) {
-  .header__content h1 {
-    font-size: 1.9rem !important;
-  }
-
-  .logo {
-    font-size: 1.2rem !important;
-  }
-
-  .logo img {
-    width: 42px !important;
-    height: 42px !important;
-  }
-
-  .header__image img {
-    height: 210px !important;
-  }
-}
-/* =========================
-   MOBILE HERO FINAL STYLE
-   图片做主题背景 + 文字浮在上面
+   MOBILE HERO SAME AS DESKTOP STYLE
+   图片背景 + 左边文字卡片
 ========================= */
 
 @media (max-width: 768px) {
@@ -952,20 +721,26 @@ nav {
     padding-top: 72px;
   }
 
-  /* Navbar clean fix */
+/* NAVBAR - mobile white version */
+@media (max-width: 768px) {
   nav {
     position: fixed !important;
     top: 0;
     left: 0;
     width: 100% !important;
     max-width: 100% !important;
-    background-color: var(--primary-color);
+    background-color: var(--white) !important;
     z-index: 9999;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
   }
 
   .nav__header {
     padding: 0.7rem 1rem !important;
-    background-color: var(--primary-color);
+    background-color: var(--white) !important;
+  }
+
+  .nav__logo .logo {
+    color: var(--primary-color) !important;
   }
 
   .logo {
@@ -977,9 +752,13 @@ nav {
     height: 42px !important;
   }
 
-  /* Hide menu properly when closed */
+  .nav__menu__btn {
+    color: var(--primary-color) !important;
+  }
+
   .nav__links {
     top: 66px !important;
+    background-color: var(--white) !important;
     opacity: 0;
     pointer-events: none;
     transform: translateY(-120%) !important;
@@ -991,22 +770,31 @@ nav {
     transform: translateY(0) !important;
   }
 
-  /* Hero section */
+  .nav__links a {
+    color: var(--text-dark) !important;
+  }
+
+  .nav__links a:hover {
+    color: var(--primary-color) !important;
+  }
+}
+
+  /* HERO same desktop feeling */
   .header__container {
     position: relative !important;
     display: block !important;
+    width: calc(100% - 2rem) !important;
+    height: 520px !important;
     padding: 0 !important;
-    margin: 0 1rem 3rem !important;
-    height: 620px;
-    overflow: hidden;
-    border-radius: 18px;
+    margin: 1rem auto 3rem !important;
+    overflow: hidden !important;
   }
 
   .header__image {
     position: absolute !important;
-    inset: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
   }
 
   .header__image img {
@@ -1014,51 +802,42 @@ nav {
     height: 100% !important;
     max-width: none !important;
     object-fit: cover !important;
-    border-radius: 18px;
-  }
-
-  /* Dark overlay */
-  .header__container::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.15),
-      rgba(0, 0, 0, 0.45)
-    );
-    z-index: 1;
+    object-position: center !important;
+    border-radius: 0 !important;
   }
 
   .header__content {
-    position: relative !important;
-    z-index: 2;
-    height: 100%;
-    display: flex !important;
-    align-items: flex-end !important;
-    padding: 1.2rem !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 0 !important;
+    transform: translateY(-50%) !important;
+    z-index: 2 !important;
+    width: 72% !important;
+    height: auto !important;
+    display: block !important;
+    padding: 0 !important;
   }
 
   .header__content > div {
-    width: 100%;
+    width: 100% !important;
     max-width: 100% !important;
-    padding: 1.5rem !important;
-    background-color: rgba(255, 255, 255, 0.82) !important;
-    backdrop-filter: blur(12px);
-    border-radius: 16px;
+    padding: 2rem 1.3rem !important;
+    background-color: rgba(255, 255, 255, 0.62) !important;
+    backdrop-filter: blur(12px) !important;
+    border-radius: 0 !important;
   }
 
   .header__content h1 {
-    font-size: 2.45rem !important;
-    line-height: 1.1 !important;
+    font-size: 2rem !important;
+    line-height: 1.15 !important;
     margin-bottom: 1rem !important;
-    color: var(--primary-color);
+    color: var(--primary-color) !important;
   }
 
   .header__content p {
-    font-size: 1rem !important;
+    font-size: 0.95rem !important;
     line-height: 1.6 !important;
-    color: var(--text-light);
+    color: var(--text-light) !important;
   }
 
   /* Section spacing */
@@ -1073,16 +852,25 @@ nav {
   }
 }
 
+/* Smaller phone */
 @media (max-width: 420px) {
   .header__container {
-    height: 560px;
+    height: 500px !important;
   }
 
-  .header__content h1 {
-    font-size: 2.1rem !important;
+  .header__content {
+    width: 75% !important;
   }
 
   .header__content > div {
-    padding: 1.2rem !important;
+    padding: 1.7rem 1.1rem !important;
+  }
+
+  .header__content h1 {
+    font-size: 1.85rem !important;
+  }
+
+  .header__content p {
+    font-size: 0.9rem !important;
   }
 }
