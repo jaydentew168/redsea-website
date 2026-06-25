@@ -62,17 +62,27 @@ const swiper = new Swiper(".swiper", {
   loop: true,
 });
 // Hide mobile navbar when scrolling down, show when scrolling up
-let lastScrollY = window.scrollY;
-const navBar = document.querySelector("nav");
+(function () {
+  let lastScrollY = window.scrollY;
+  const navBar = document.querySelector("nav");
 
-window.addEventListener("scroll", () => {
-  if (window.innerWidth <= 768) {
-    if (window.scrollY > lastScrollY && window.scrollY > 120) {
-      navBar.classList.add("nav--hidden");
-    } else {
-      navBar.classList.remove("nav--hidden");
-    }
+  if (!navBar) return;
 
-    lastScrollY = window.scrollY;
-  }
-});
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (window.innerWidth <= 768) {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > lastScrollY && currentScrollY > 120) {
+          navBar.classList.add("nav--hidden");
+        } else {
+          navBar.classList.remove("nav--hidden");
+        }
+
+        lastScrollY = currentScrollY;
+      }
+    },
+    { passive: true }
+  );
+})();
