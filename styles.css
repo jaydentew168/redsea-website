@@ -874,3 +874,79 @@ nav {
     font-size: 0.9rem !important;
   }
 }
+/* =========================
+   MOBILE NAV - SHOW LINKS DIRECTLY
+   不用 hamburger，手机版直接显示 About Products Contact
+========================= */
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 125px !important;
+  }
+
+  nav {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    background-color: var(--white) !important;
+    z-index: 99999 !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  }
+
+  .nav__header {
+    width: 100% !important;
+    padding: 0.7rem 1rem 0.4rem !important;
+    display: flex !important;
+    justify-content: center !important;
+    background-color: var(--white) !important;
+  }
+
+  .nav__logo .logo {
+    color: var(--primary-color) !important;
+  }
+
+  .logo {
+    font-size: 1.25rem !important;
+  }
+
+  .logo img {
+    width: 46px !important;
+    height: 46px !important;
+  }
+
+  /* hide hamburger button */
+  .nav__menu__btn {
+    display: none !important;
+  }
+
+  /* show nav links directly */
+  .nav__links {
+    position: static !important;
+    width: 100% !important;
+    padding: 0.4rem 1rem 0.9rem !important;
+
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 1.8rem !important;
+
+    background-color: var(--white) !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: none !important;
+    z-index: 99999 !important;
+  }
+
+  .nav__links a {
+    color: var(--text-dark) !important;
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+  }
+
+  .nav__links a:hover {
+    color: var(--primary-color) !important;
+  }
+}
